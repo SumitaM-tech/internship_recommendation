@@ -1,0 +1,289 @@
+/* ── Base App Background ─────────────────────────────────────────────────── */
+.stApp {
+    background-image: url("image-1.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-color: #0a0a1a;
+    min-height: 100vh;
+}
+
+/* ── Remove white block — fully transparent content area ────────────────── */
+.main .block-container {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 2.5rem 3rem;
+    max-width: 900px;
+}
+
+/* ── Headings ────────────────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.8);
+}
+
+/* ── Body text ───────────────────────────────────────────────────────────── */
+p, li, label, .stMarkdown, .stMarkdown p, .stMarkdown li {
+    color: #e8eef8 !important;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+strong, b {
+    color: #7ec8f7 !important;
+}
+
+/* ── Info box (project description card) ────────────────────────────────── */
+.project-info-box {
+    background: rgba(10, 20, 50, 0.55);
+    border: 1px solid rgba(126, 200, 247, 0.3);
+    border-radius: 14px;
+    padding: 1.4rem 1.8rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(6px);
+}
+
+/* ── File Uploader — attractive dark style ───────────────────────────────── */
+[data-testid="stFileUploader"] {
+    border: 2px dashed rgba(126, 200, 247, 0.6);
+    border-radius: 16px;
+    padding: 1.2rem 1.5rem;
+    background: rgba(0, 10, 30, 0.55);
+    backdrop-filter: blur(10px);
+    transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 20px rgba(74, 144, 217, 0.15);
+}
+
+[data-testid="stFileUploader"]:hover {
+    border-color: #4a90d9;
+    background: rgba(0, 20, 60, 0.7);
+    box-shadow: 0 6px 28px rgba(74, 144, 217, 0.35);
+}
+
+/* Outer label above the dropzone */
+[data-testid="stFileUploader"] label {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.7);
+}
+
+/* Inner dropzone box — black background */
+[data-testid="stFileUploadDropzone"] {
+    background-color: #000000 !important;
+    border-radius: 10px !important;
+    padding: 1rem !important;
+    border: 1.5px solid rgba(74, 144, 217, 0.4) !important;
+}
+
+/* "Drag and drop file here" main text */
+[data-testid="stFileUploadDropzone"] > div > span,
+[data-testid="stFileUploadDropzone"] span {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+}
+
+/* "Limit 200MB per file • TXT, PDF, DOCX" small text */
+[data-testid="stFileUploadDropzone"] small,
+[data-testid="stFileUploadDropzone"] p {
+    color: #b0d4f7 !important;
+    font-size: 0.82rem !important;
+}
+
+/* Upload cloud icon — blue & glowing */
+[data-testid="stFileUploadDropzone"] svg {
+    fill: #7ec8f7 !important;
+    stroke: #7ec8f7 !important;
+    filter: drop-shadow(0 0 6px rgba(126,200,247,0.6));
+}
+
+/* "Browse files" button — black bg, white bold text, blue border */
+[data-testid="stFileUploader"] button,
+[data-testid="stFileUploadDropzone"] button {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border: 2px solid #4a90d9 !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    padding: 0.5rem 1.4rem !important;
+    cursor: pointer;
+    transition: all 0.22s ease !important;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.5) !important;
+    letter-spacing: 0.3px;
+}
+
+[data-testid="stFileUploader"] button:hover,
+[data-testid="stFileUploadDropzone"] button:hover {
+    background-color: #4a90d9 !important;
+    color: #ffffff !important;
+    border-color: #7ec8f7 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(74, 144, 217, 0.55) !important;
+}
+
+/* ── Download Buttons ────────────────────────────────────────────────────── */
+.stDownloadButton > button {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #4a90d9 !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    padding: 0.45rem 1.2rem !important;
+    transition: all 0.22s ease !important;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.4) !important;
+}
+
+.stDownloadButton > button:hover {
+    background-color: #4a90d9 !important;
+    border-color: #7ec8f7 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(74, 144, 217, 0.5) !important;
+}
+
+/* ── Other Buttons ───────────────────────────────────────────────────────── */
+.stButton > button {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #4a90d9;
+    border-radius: 8px;
+    padding: 0.45rem 1.2rem;
+    font-weight: 700;
+    transition: all 0.22s ease;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.4);
+}
+
+.stButton > button:hover {
+    background-color: #4a90d9;
+    border-color: #7ec8f7;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(74, 144, 217, 0.5);
+}
+
+/* ── Slider ──────────────────────────────────────────────────────────────── */
+[data-testid="stSlider"] > div > div > div > div {
+    background-color: #4a90d9 !important;
+}
+
+[data-testid="stSlider"] label,
+[data-testid="stSlider"] p {
+    color: #e8eef8 !important;
+}
+
+/* ── Tables — black background, attractive ───────────────────────────────── */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 28px rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+}
+
+thead tr {
+    background-color: #000000 !important;
+    border-bottom: 2px solid #4a90d9;
+}
+
+thead th {
+    color: #7ec8f7 !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem;
+    padding: 12px 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 11px 16px;
+    border: 1px solid rgba(74, 144, 217, 0.15);
+    font-size: 0.88rem;
+    color: #e8eef8 !important;
+    background: rgba(0, 5, 20, 0.6);
+}
+
+tbody tr:hover td {
+    background-color: rgba(74, 144, 217, 0.18) !important;
+    transition: background-color 0.18s ease;
+}
+
+tbody tr:nth-child(even) td {
+    background: rgba(0, 10, 35, 0.7);
+}
+
+/* ── Table links ─────────────────────────────────────────────────────────── */
+td a {
+    color: #7ec8f7 !important;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 5px;
+    background: rgba(74, 144, 217, 0.15);
+    border: 1px solid rgba(74, 144, 217, 0.3);
+    transition: all 0.18s ease;
+}
+
+td a:hover {
+    background: #4a90d9 !important;
+    color: #ffffff !important;
+    border-color: #7ec8f7;
+}
+
+/* ── Markdown links ──────────────────────────────────────────────────────── */
+.stMarkdown a {
+    color: #7ec8f7 !important;
+}
+
+.stMarkdown a:hover {
+    color: #4a90d9 !important;
+    text-decoration: underline;
+}
+
+/* ── Alerts (success, info, warning) ────────────────────────────────────── */
+[data-testid="stAlert"] {
+    border-radius: 10px;
+    background: rgba(0, 5, 20, 0.65) !important;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(74, 144, 217, 0.35) !important;
+}
+
+[data-testid="stAlert"] * {
+    color: #e8eef8 !important;
+}
+
+/* ── st.table container ──────────────────────────────────────────────────── */
+[data-testid="stTable"] {
+    background: transparent;
+}
+
+/* ── st.table keyword table ──────────────────────────────────────────────── */
+[data-testid="stTable"] table thead tr {
+    background: #000000 !important;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+section[data-testid="stSidebar"] {
+    background: rgba(0, 5, 20, 0.88);
+    backdrop-filter: blur(8px);
+}
+
+/* ── Top header bar ──────────────────────────────────────────────────────── */
+header[data-testid="stHeader"] {
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(8px);
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: rgba(0,0,0,0.3); }
+::-webkit-scrollbar-thumb { background: #4a90d9; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #7ec8f7; }
