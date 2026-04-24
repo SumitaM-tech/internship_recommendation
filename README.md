@@ -1,6 +1,6 @@
 # Internship Recommendation System using Machine Learning
 
-Accessed Website: https://intershiprecommendation.streamlit.app/
+
 
 # Why this project is created? 
 Internship searching is a challenging task, and the process of finding the right opportunities that align with your skills and aspirations can be time-consuming. Therefore, the goal of this system is to simplify and enhance the internship search experience. By uploading your resume, the system analyzes its key strengths and matches them with a curated list of internship postings. This personalized approach aims to help users discover relevant opportunities more efficiently.
